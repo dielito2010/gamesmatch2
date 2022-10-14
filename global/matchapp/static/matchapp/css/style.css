@@ -1,4 +1,5 @@
 body{
+  margin: 10px;
   min-height: 100%;
   background-image: url('fundo2.png');
   background-size: cover;
@@ -7,7 +8,12 @@ body{
   background-attachment: fixed;
 }
 
-footer{font-style: italic;}
+footer{
+  background-color: black;
+  margin-top: auto;
+  font-style: italic;
+  min-height: 100%;
+}
 
 /*tirando sublinhado de todos os links*/
 a {text-decoration: none;}
@@ -15,3 +21,15 @@ a {text-decoration: none;}
 .bntPrincipais{text-align:right;}
 
 .navbar{background-color: rgba(135, 255, 135, 0.363);}
+
+.match{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: rgba(135, 255, 135, 0.363);
+  width: 80%;
+  line-height: 50px;
+  align-items: center;
+  margin-left: 10%;
+}
