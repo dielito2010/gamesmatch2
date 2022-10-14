@@ -2,19 +2,22 @@
 {% block content %}
 
 <br>
-    <div width="80%" align="center">    
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Architecto alias, veritatis quaerat fuga amet itaque culpa,
-            blanditiis, iusto vel eum repellat. Blanditiis necessitatibus
-            facilis neque perferendis sequi. Eum, architecto facere!
-        </p>
+    <table cellspacing="6" align="center">        
+        <tr>
+            <td class="alinhadoDireita">
+                <span class="textoRealce-D">Alinhado à direita</span>
+                @Html.Label("Cep: ")
+            </td>            
+            <td class="alinhadoEsquerda">
+                <span class="textoRealce-E">Alinhado à esquerda</span>
+                @Html.Label("Endereco: ")
 
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Doloribus maiores ipsa, pariatur necessitatibus minima repudiandae debitis illo iste.
-            Atque eum corrupti quidem odit optio. Consequatur tenetur voluptas rem deserunt culpa.
-        </p>
-    </div>
+            </td>
+            <td class="alinhadoCentro">
+                <span class="textoRealce-C">Alinhado ao centro</span>
+                @Html.Label("Número: ")
+            </td>
+        </tr>
+    </table>
 
 {% endblock %}

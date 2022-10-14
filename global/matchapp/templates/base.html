@@ -9,21 +9,21 @@
     <link rel="stylesheet" href="{% static 'matchapp/css/style.css' %}">
 </head>
 <body>
-    <div class="backgound">
+    <!--div class="backgound">
+    <img src="{% static 'matchapp/img/fundo2.png' %}"-->
         <div class="navbar">
             <table width="100%">
                 <tr>
                     <td width="50%">
                         <img src="{% static 'matchapp/img/logo.png' %}" alt="logo" align="left">
                     </td>
-                    <td width="50%" align="rigth">
+                    <td class="bntPrincipais" width="50%">
                         {% if user.is_aitenticated %}
-                        Olá, {{user.get_username}} &nbsp;&nbsp;
+                        Olá, {{user.get_username}}
                         <a href="{% url 'logout' %}">Sair</a>
                         {% else %}
-                            <a href="{% url 'login' %}">Login</a> &nbsp;&nbsp;
-                            &nbsp;&nbsp; | &nbsp;&nbsp;
-                            <a href="{% url 'cadastro' %}">Cadastro</a> &nbsp;&nbsp;
+                            <a href="{% url 'login' %}">Login  |</a>
+                            <a href="{% url 'cadastro' %}">Cadastro</a>
                         {% endif %}
                     </td>
                 </tr>
@@ -37,6 +37,6 @@
             <p><a href="mailto:admiel@bol.com.br">GamesMatch 2022</a></p>
         </div>
     </footer>
-    </div>
+    <!--/div-->
 </body>
 </html>

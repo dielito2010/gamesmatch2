@@ -1,7 +1,17 @@
-footer {
-    font-style: italic;
-  }
+body{
+  min-height: 100%;
+  background-image: url('fundo2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
 
-  a {
-    text-decoration: none;
-  }
+footer{font-style: italic;}
+
+/*tirando sublinhado de todos os links*/
+a {text-decoration: none;}
+
+.bntPrincipais{text-align:right;}
+
+.navbar{background-color: rgba(135, 255, 135, 0.363);}
