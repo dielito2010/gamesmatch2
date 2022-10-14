@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesMatch</title>
+    <link rel="stylesheet" href="{% static 'matchapp/css/style.css' %}">
+</head>
+<body>
+
+<h1>Olá, mundo</h1>
+
+    <br>
+        {% block content %}
+        {% endblock %}
+    <footer>
+        <div align="center">
+            <p style="font-style: italic;"><a href="mailto:admiel@bol.com.br">GamesMatch 2022</a></p>
+        </div>
+    </footer>
+</body>
+</html>
