@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% {% block content %}
+
+    <!--div class="form_perfil_add">
+        <h4>Cadastrar Perfil</h4>
+        <hr>
+        <--form action="{% url 'perfil_add' perfil %}" method="POST">
+        <form action="." method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="bnt-save" type="submit">Salvar</button>
+            <a href="{% url 'home' %}"></a><button class="bnt-cancel">Cancelar</button></a>
+        </form>
+    </div-->
+    <div class="pefilAdd">
+        <form action="{% url 'perfil_add' %}" method="POST">
+            {% csrf_token %}
+            <div>
+                <p>NOME: <input type="text" name="nome"></p>
+                <p>CPF: <input type="number" name="cpf"></p>
+                <p>GAME1: <input type="text" name="game1"></p>
+                <p>PONTUAÇÃO1: <input type="number" name="pontuacao1"></p>
+                <p>GAME2: <input type="text" name="game2"></p>
+                <p>PONTUAÇÃO2: <input type="number" name="pontuacao2"></p>
+                <p>DATA DE NASCIMENTO: <input type="date" name="dat_nasc"></p>
+                <p>NICKNAME: <input type="text" name="nickname"></p>
+                <p>IMAGEM DE PERFIL: <input type="image" name="image"></p>
+                <p>CEP: <input type="number" name="cep"></p>
+                <p>ENDEREÇO: <input type="text" name="endereco"></p>
+                <p>ZONE: <input type="text" name="zone"></p>
+            </div>
+            <center>
+                <button class="bnt-submit" type="submit">Salvar</button>
+                <a href="{% url 'home' %}" <button class="bnt-cancel">Cancelar</a>
+            </center>
+        </form>
+    </div>
+{% endblock %} %}

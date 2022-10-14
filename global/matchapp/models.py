@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class perfil(models.Model):
+class Perfil(models.Model):
     #email = models.ForeignKey(User.email)
     nome = models.CharField(max_length=255)
     cpf = models.PositiveIntegerField(primary_key=True)
