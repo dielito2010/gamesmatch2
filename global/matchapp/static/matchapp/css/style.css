@@ -48,6 +48,15 @@ a {text-decoration: none;}
   box-shadow: 10px 10px 10px black;
 }
 
+.headCadPerfil {
+  text-align: center;
+  color: white;
+}
+
+.cadPerfil {
+  color: white;
+}
+
 /*.match{
   display: flex;
   justify-content: center;

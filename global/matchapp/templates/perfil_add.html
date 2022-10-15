@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block content %}
 
     <!--div class="form_perfil_add">
@@ -13,21 +12,25 @@
             <a href="{% url 'home' %}"></a><button class="bnt-cancel">Cancelar</button></a>
         </form>
     </div-->
+
     <section>
-        <div>
-            <br>
-            <h4>CADASTRAR PERFIL:</h4>
+        <div class="headCadPerfil">
+            <h1>Cadastre seu perfil no GamesMatch:</h1>
             <hr>
-            {% if messages %}
+        </div>
+
+            <!--{% if messages %}
             {% for m in messages %}
             <div class="alertSecond">
                 {{ m }}
             </div>
             {% endfor %}
-            {% endif %}
+            {% endif %}-->
+
+        <div class="cadPerfil">
             <form action="{% url 'perfil_add' %}" method="POST">
                 {% csrf_token %}
-                <div align="left">
+                <div>
                     <p>NOME: <input type="text" name="nome"></p>
                     <p>CPF: <input type="number" name="cpf"></p>
                     <p>GAME1: <input type="text" name="game1"></p>
@@ -41,8 +44,9 @@
                     <p>ENDEREÇO: <input type="text" name="endereco"></p>
                     <p>ZONE: <input type="text" name="zone"></p>
                 </div>
+                <hr>
                 <center>
-                    <button class="bnt-submit" type="submit">Salvar</button>
+                    <button class="bnt-submit" type="submit" onclick="savePerfil()">Salvar</button>
                     <a href="{% url 'home' %}" <button class="bnt-cancel">Cancelar</a>
                 </center>
             </form>
