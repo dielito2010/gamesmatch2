@@ -1,2 +1,6 @@
-function alerta()
-    window.alert('teste de script')
+function carregar() {
+    window.alert('olá')
+}
+function alerta() {
+    alert('Teste de JavaScript')
+}

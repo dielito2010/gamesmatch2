@@ -15,6 +15,7 @@ section {
   width: 500px;
   margin: auto;
   margin-bottom: 70px;
+  box-shadow: 10px 10px 10px black;
 }
 
 /*footer{
@@ -42,7 +43,10 @@ a {text-decoration: none;}
 
 .bntPrincipais{text-align:right;}
 
-.navbar{background-color: rgba(135, 255, 135, 0.363);}
+.navbar{
+  background-color: rgba(135, 255, 135, 0.363);
+  box-shadow: 10px 10px 10px black;
+}
 
 /*.match{
   display: flex;
