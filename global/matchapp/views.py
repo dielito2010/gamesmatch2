@@ -18,9 +18,8 @@ def cadastro(request):
 
 def perfil(request):
     perfil = Perfil.objects.all()
-
     context = {
-        'perfil' : perfil
+        'perfis' : perfil
     }
     return render(request, 'perfil.html', context)
 

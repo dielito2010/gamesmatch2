@@ -12,32 +12,27 @@ section {
   background: rgba(135, 255, 135, 0.363);
   border-radius: 10px;
   padding: 15px;
-  width: 500px;
+  /*width: 500px;*/
+  width: fit-content;
   margin: auto;
   margin-bottom: 70px;
   box-shadow: 10px 10px 10px black;
 }
 
-/*footer{
-  background-color: black;
-  font-style: italic;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
-}*/
+.viewHome {
+  width: 800px;
+}
+
 footer {
+  font-style: italic;
   position: fixed;
   bottom: 0;
   background-color: black;
-  color: #FFF;
   width: 100%;
   height: 35px;    
   text-align: center;
   line-height: 100%;
 }
-
 /*tirando sublinhado de todos os links*/
 a {text-decoration: none;}
 
@@ -57,24 +52,24 @@ a {text-decoration: none;}
   color: white;
 }
 
-/*.match{
-  display: flex;
-  justify-content: center;
+.headPerfil {
   text-align: center;
   color: white;
-  background-color: rgba(135, 255, 135, 0.363);
-  width: 80%;
-  line-height: 50px;
-  align-items: center;
-  margin-left: 10%;
 }
 
-.pefilAdd {
-  width: 30%;
-  height: 600px;
-  background: rgba(135, 255, 135, 0.363);
-  margin-bottom: 100px;
-}*/
+.viewPerfil {
+  width: auto;
+  color: white;
+}
+
+.tbPerfil, th {
+  background-color: rgba(0, 0, 0, 0.582);
+  text-align: left;
+  font-size: 14px;
+  width: fit-content;
+  border-collapse: collapse;
+  border: 2px solid aquamarine;
+}
 
 /*-------------implementa aqui nesse espaço o estilo da tela login e login_add-------------*/
 
