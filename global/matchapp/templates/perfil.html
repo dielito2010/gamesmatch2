@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="perfil">
+        <h4>Perfil</h4>
+        <hr>
+        {% if messages %}
+        {% for m in messages %}
+        <div class="alertSecond">
+            {{ m }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        <table>
+            <td>{{ perfil.nome }}</td>
+            <td>{{ perfil.cpf }}</td>
+            <td>{{ perfil.game1 }}</td>
+            <td>{{ perfil.pontuacao1 }}</td>
+            <td>{{ perfil.game2 }}</td>
+            <td>{{ perfil.pontuacao2 }}</td>
+            <td>{{ perfil.dat_nasc }}</td>
+            <td>{{ perfil.nickname }}</td>
+            <td>{{ perfil.image }}</td>
+            <td>{{ perfil.cep }}</td>
+            <td>{{ perfil.endereco }}</td>
+            <td>{{ perfil.zone }}</td>
+        </table>
+    </div>
+{% endblock  %}
