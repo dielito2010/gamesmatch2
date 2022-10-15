@@ -8,4 +8,6 @@ python manage.py makemigrations matchapp
 
 Start project with:
 
+cd global
+
 python manage.py runserver
