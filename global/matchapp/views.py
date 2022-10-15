@@ -11,10 +11,10 @@ def home(request):
     return render(request, 'home.html')
 
 def login(request):
-    return render(request, 'home.html')
+    return render(request, 'login.html')
 
 def cadastro(request):
-    return render(request, 'home.html')
+    return render(request, 'login_add.html')
 
 def perfil(request):
     perfil = Perfil.objects.all()
