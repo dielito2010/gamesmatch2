@@ -36,42 +36,42 @@ def perfil_add(request):
 #
 #        if(form.is_valid()):
 
-#def perfil_add(request):
-#    if request.method == "POST":
-#        return render (request, 'perfil_add.html')
-#    else:
-#        nome = request.POST.get('nome')
-#        cpf = request.POST.get('cpf')
-#        game1 = request.POST.get('game1')
-#        pontuacao1 = request.POST.get('pontuacao1')
-#        game2 = request.POST.get('game2')
-#        pontuacao2 = request.POST.get('pontuacao2')
-#        dat_nasc = request.POST.get('dat_nasc')
-#        nickname = request.POST.get('nickname')
-#        image = request.POST.get('image')
-#        cep = request.POST.get('cep')
-#        endereco = request.POST.get('endereco')
-#        zone = request.POST.get('zone')
-#    
-#    perfil = Perfil.objects.filter(cpf=cpf).first()
-#    if perfil:
-#        messages.info(request, 'Esse CPF já está cadastrado no GamesMatch!')
-#        return redirect('perfil_add')
-#    else:
-#        perfil = Perfil(
-#            nome = nome,
-#            cpf = cpf,
-#            game1 = game1,
-#            pontuacao1 = pontuacao1,
-#            game2 = game2,
-#            pontuacao2 = pontuacao2,
-#            dat_nasc = dat_nasc,
-#            nickname = nickname,
-#            image = image,
-#            cep = cep,
-#            endereco = endereco,
-#            zone = zone
-#        )
-#        perfil.save()
-#        messages.info(request, 'Perfil cadastrado com sucesso!')
-#        return redirect('perfil')
+def perfil_add(request):
+    if request.method == "GET":
+        return render (request, 'perfil_add.html')
+    else:
+        nome = request.POST.get('nome')
+        cpf = request.POST.get('cpf')
+        game1 = request.POST.get('game1')
+        pontuacao1 = request.POST.get('pontuacao1')
+        game2 = request.POST.get('game2')
+        pontuacao2 = request.POST.get('pontuacao2')
+        dat_nasc = request.POST.get('dat_nasc')
+        nickname = request.POST.get('nickname')
+        image = request.POST.get('image')
+        cep = request.POST.get('cep')
+        endereco = request.POST.get('endereco')
+        zone = request.POST.get('zone')
+    
+    perfil = Perfil.objects.filter(cpf=cpf).first()
+    if perfil:
+        messages.info(request, 'Esse CPF já está cadastrado no GamesMatch!')
+        return redirect('perfil_add')
+    else:
+        perfil = Perfil(
+            nome = nome,
+            cpf = cpf,
+            game1 = game1,
+            pontuacao1 = pontuacao1,
+            game2 = game2,
+            pontuacao2 = pontuacao2,
+            dat_nasc = dat_nasc,
+            nickname = nickname,
+            image = image,
+            cep = cep,
+            endereco = endereco,
+            zone = zone
+        )
+        perfil.save()
+        #messages.info(request, 'Perfil cadastrado com sucesso!')
+        return redirect('perfil')
