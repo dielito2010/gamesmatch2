@@ -8,6 +8,15 @@ body{
   background-attachment: fixed;
 }
 
+section {
+  background: rgba(135, 255, 135, 0.363);
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
 /*footer{
   background-color: black;
   font-style: italic;
@@ -35,7 +44,7 @@ a {text-decoration: none;}
 
 .navbar{background-color: rgba(135, 255, 135, 0.363);}
 
-.match{
+/*.match{
   display: flex;
   justify-content: center;
   text-align: center;
@@ -52,4 +61,11 @@ a {text-decoration: none;}
   height: 600px;
   background: rgba(135, 255, 135, 0.363);
   margin-bottom: 100px;
-}
+}*/
+
+/*-------------implementa aqui nesse espaço o estilo da tela login e login_add-------------*/
+
+
+
+
+/*-------------------------------------------------------------------------------------------*/
