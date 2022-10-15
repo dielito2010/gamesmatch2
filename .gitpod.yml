@@ -1,0 +1,12 @@
+tasks:
+  - init: |
+      pip install --upgrade pip wheel setuptools
+      pip install -r requirements.txt
+      python manage.py migrate
+    command: |
+      python manage.py runserver
+
+ports: 
+  - port: 8000
+    visibility: public
+    onOpen: open-browser
