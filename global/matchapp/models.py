@@ -5,7 +5,7 @@ from django.db import models
 class Perfil(models.Model):
     #email = models.ForeignKey(User.email)
     nome = models.CharField(max_length=255)
-    cpf = models.PositiveIntegerField(primary_key=True)
+    cpf = models.PositiveIntegerField(primary_key=True, max_length=11)
     game1 = models.CharField(max_length=255)
     pontuacao1 = models.PositiveIntegerField()
     game2 = models.CharField(max_length=255, blank=True, null=True)
@@ -13,6 +13,6 @@ class Perfil(models.Model):
     dat_nasc = models.DateField()
     nickname = models.CharField(max_length=100)
     image = models.ImageField(blank=True, null=True)
-    cep = models.PositiveIntegerField(blank=True, null=True)
+    cep = models.PositiveIntegerField(blank=True, null=True, max_length=8)
     endereco = models.CharField(max_length=255, blank=True, null=True)
     zone = models.CharField(max_length=100)

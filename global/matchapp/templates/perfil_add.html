@@ -18,15 +18,17 @@
             <h1>Cadastre seu perfil no GamesMatch:</h1>
             <hr>
         </div>
-
-            <!--{% if messages %}
-            {% for m in messages %}
-            <div class="alertSecond">
-                {{ m }}
-            </div>
-            {% endfor %}
-            {% endif %}-->
-
+        {% if messages %}
+        {% for m in messages %}
+        <div style="background-color: red; font-size: 20px;
+        color: white; text-align: center; border-radius: 10px;">
+            <br>
+            {{ m }}
+            <br>
+            <br>
+        </div>
+        {% endfor %}
+        {% endif %}
         <div class="cadPerfil">
             <form action="{% url 'perfil_add' %}" method="POST">
                 {% csrf_token %}

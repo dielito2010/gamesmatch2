@@ -9,7 +9,8 @@
             consectetur fugit aut explicabo minus, aliquam amet
             architecto odit veritatis doloremque facilis, alias fuga.
         </p>
-        <button onclick="alerta()">Teste de JavaScript</button>
+        <a href="{% url 'perfil_add' %}"
+        onclick="return confirm('Adicionr Perfil?')">Perfil Add</a>
     </div>
 </section>
 {% endblock %}

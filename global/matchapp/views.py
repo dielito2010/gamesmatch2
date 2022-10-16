@@ -1,5 +1,6 @@
 #from multiprocessing import context
-from pyexpat.errors import messages
+#from pyexpat.errors import messages
+from django.contrib import messages
 from django.shortcuts import redirect, render
 #from django.contrib.auth.decorators import login_required
 from matchapp.models import Perfil
