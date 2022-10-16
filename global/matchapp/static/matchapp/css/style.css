@@ -8,31 +8,6 @@ body{
   background-attachment: fixed;
 }
 
-section {
-  background: rgba(135, 255, 135, 0.363);
-  border-radius: 10px;
-  padding: 15px;
-  /*width: 500px;*/
-  width: fit-content;
-  margin: auto;
-  margin-bottom: 70px;
-  box-shadow: 10px 10px 10px black;
-}
-
-.viewHome {
-  width: 800px;
-}
-
-footer {
-  font-style: italic;
-  position: fixed;
-  bottom: 0;
-  background-color: black;
-  width: 100%;
-  height: 35px;    
-  text-align: center;
-  line-height: 100%;
-}
 /*tirando sublinhado de todos os links*/
 a{
 	text-decoration: none;
@@ -44,6 +19,10 @@ a:hover{
 	color: white;
 }
 
+p {
+  color: white;
+}
+
 .bntPrincipais{text-align:right;}
 
 .navbar{
@@ -52,36 +31,6 @@ a:hover{
   box-shadow: 10px 10px 10px black;
   border-radius: 30px;
 }
-
-.headCadPerfil {
-  text-align: center;
-  color: white;
-}
-
-.cadPerfil {
-  color: white;
-}
-
-.headPerfil {
-  text-align: center;
-  color: white;
-}
-
-.viewPerfil {
-  width: auto;
-  color: white;
-}
-
-.tbPerfil, th {
-  background-color: rgba(0, 0, 0, 0.582);
-  text-align: left;
-  font-size: 14px;
-  width: fit-content;
-  border-collapse: collapse;
-  border: 2px solid aquamarine;
-}
-
-/*-------------implementa aqui nesse espaço o estilo da tela login e login_add-------------*/
 
 .container{
 	width: 100%;
@@ -117,6 +66,22 @@ a:hover{
   padding-bottom: 50px;
   position: relative;
   left: 35%;
+}
+
+.screenHome {
+	width: 1200px;
+	background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));
+	border-radius: 15px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding-top: 10px;
+	color: #fff;
+	align-items: center;
+	line-height: 50px;
+  box-shadow: 10px 10px 10px black;
 }
 
 .form{
@@ -156,5 +121,13 @@ a:hover{
 	font-weight: 700;
 }
 
-
-/*-------------------------------------------------------------------------------------------*/
+footer {
+  font-style: italic;
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  height: 35px;    
+  text-align: center;
+  line-height: 100%;
+}
