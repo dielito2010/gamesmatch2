@@ -25,10 +25,17 @@
             <input name="pontuacao2" type="number" placeholder="Seus pontos, não pode ser fake einh ;-)" class="inputs" />
             <input name="dat_nasc" type="date" class="inputs" />
             <input name="nickname" type="text" placeholder="*Nickname" class="inputs" />
-            <input name="image" type="button" value="Enviar uma imagem" class="inputs" />
             <input name="cep" type="text" placeholder="CEP, somente números" maxlength="8" minlength="8" class="inputs" />
             <input name="endereco" type="text" placeholder="Seu endereço completo" class="inputs" />
-            <input name="zone" type="text" placeholder="*Zona, tipo, zona-leste, oeste..." class="inputs" />
+            <select name="zone" type="text" class="inputs">
+                    <option value="Zona-Leste">Em qual zona da cidade você mora?</option>
+                    <option value="Zona-Leste">Zona-Leste</option>
+                    <option value="Zona-Oeste">Zona-Oeste</option>
+                    <option value="Zona-Sul">Zona-Sul</option>
+                    <option value="Zona-Norte">Zona-Norte</option>
+                    <option value="Zona-Centro-Oeste">Zona-Centro-Oeste</option>
+            </select>
+            <input name="image" type="button" value="Enviar uma imagem" class="inputs" />
             <button class="btn" type="submit" onclick="savePerfil()">criar</button>
             <p>* Obrigatórios</p>
             <div style="background-color: rgba(0, 0, 0, 0.192)">
