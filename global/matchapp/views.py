@@ -1,9 +1,11 @@
 #from multiprocessing import context
-from pyexpat.errors import messages
+#from pyexpat.errors import messages
+from django.contrib import messages
 from django.shortcuts import redirect, render
 #from django.contrib.auth.decorators import login_required
 from matchapp.models import Perfil
 #from matchapp.forms import PerfilForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -18,9 +20,8 @@ def cadastro(request):
 
 def perfil(request):
     perfil = Perfil.objects.all()
-
     context = {
-        'perfil' : perfil
+        'perfis' : perfil
     }
     return render(request, 'perfil.html', context)
 
@@ -52,7 +53,15 @@ def perfil_add(request):
         cep = request.POST.get('cep')
         endereco = request.POST.get('endereco')
         zone = request.POST.get('zone')
-    
+
+        if cpf=='' or nome=='' or game1=='' or pontuacao1=='' or dat_nasc=='' or nickname=='' or zone=='':
+            messages.info(request, 'Campos obrigatórios não foram preenchidos!')
+            return redirect('perfil_add')
+        if pontuacao2=='':
+            pontuacao2=0
+        if cep=='':
+            cep=0
+            
     perfil = Perfil.objects.filter(cpf=cpf).first()
     if perfil:
         messages.info(request, 'Esse CPF já está cadastrado no GamesMatch!')

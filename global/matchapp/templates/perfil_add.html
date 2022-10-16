@@ -1,55 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    <!--div class="form_perfil_add">
-        <h4>Cadastrar Perfil</h4>
-        <hr>
-        <--form action="" method="POST">
-        <form action="." method="POST">
+<div class="container">
+    <!-- tela de login -->
+    <div class="screenCadPerfil">
+        <!-- formulário de login -->
+        <form class="form" action="{% url 'perfil_add' %}" method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button class="bnt-save" type="submit">Salvar</button>
-            <a href="{% url 'home' %}"></a><button class="bnt-cancel">Cancelar</button></a>
-        </form>
-    </div-->
-
-    <section>
-        <div class="headCadPerfil">
-            <h1>Cadastre seu perfil no GamesMatch:</h1>
-            <hr>
-        </div>
-
-            <!--{% if messages %}
+            <h3 class="title">Cadastre-se no GamesMatch</h3>
+            {% if messages %}
             {% for m in messages %}
-            <div class="alertSecond">
+            <div style="background-color: red; font-size: 20px; color: white; text-align: center;">
                 {{ m }}
             </div>
+            <br>
             {% endfor %}
-            {% endif %}-->
-
-        <div class="cadPerfil">
-            <form action="{% url 'perfil_add' %}" method="POST">
-                {% csrf_token %}
-                <div>
-                    <p>NOME: <input type="text" name="nome"></p>
-                    <p>CPF: <input type="number" name="cpf"></p>
-                    <p>GAME1: <input type="text" name="game1"></p>
-                    <p>PONTUAÇÃO1: <input type="number" name="pontuacao1"></p>
-                    <p>GAME2: <input type="text" name="game2"></p>
-                    <p>PONTUAÇÃO2: <input type="number" name="pontuacao2"></p>
-                    <p>DATA DE NASCIMENTO: <input type="date" name="dat_nasc"></p>
-                    <p>NICKNAME: <input type="text" name="nickname"></p>
-                    <p>FOTO: <input type="button" name="image" value="Imagem para perfil"></p>
-                    <p>CEP: <input type="number" name="cep"></p>
-                    <p>ENDEREÇO: <input type="text" name="endereco"></p>
-                    <p>ZONE: <input type="text" name="zone"></p>
-                </div>
-                <hr>
-                <center>
-                    <button class="bnt-submit" type="submit" onclick="savePerfil()">Salvar</button>
-                    <a href="{% url 'home' %}" <button class="bnt-cancel">Cancelar</a>
-                </center>
-            </form>
-        </div>
-    </section>
+            {% endif %}
+            <input name="nome" type="text" placeholder="*Seu nome completo" class="inputs" />
+            <input name="email" type="email" placeholder="*Seu email" class="inputs" />
+            <input name="senha" type="password" placeholder="*Uma senha" class="inputs" />
+            <input name="cpf" type="text" placeholder="*CPF, somente números" maxlength="11" minlength="11" class="inputs" />
+            <input name="game1" type="text" placeholder="*Seu game favorito" class="inputs" />
+            <input name="pontuacao1" type="number" placeholder="*Seus pontos no game favorito" class="inputs" />
+            <input name="game2" type="text" placeholder="Tem outro favorito? Digite aqui!" class="inputs" />
+            <input name="pontuacao2" type="number" placeholder="Seus pontos, não pode ser fake einh ;-)" class="inputs" />
+            <input name="dat_nasc" type="date" class="inputs" />
+            <input name="nickname" type="text" placeholder="*Nickname" class="inputs" />
+            <input name="image" type="button" value="Enviar uma imagem" class="inputs" />
+            <input name="cep" type="text" placeholder="CEP, somente números" maxlength="8" minlength="8" class="inputs" />
+            <input name="endereco" type="text" placeholder="Seu endereço completo" class="inputs" />
+            <input name="zone" type="text" placeholder="*Zona, tipo, zona-leste, oeste..." class="inputs" />
+            <button class="btn" type="submit" onclick="savePerfil()">criar</button>
+            <p>* Obrigatórios</p>
+            <div style="background-color: rgba(0, 0, 0, 0.192)">
+                <p class="description">Desistiu de criar o pefil? Volte para  <a href="{% url 'home' %}">HOME</a></p>
+            </div>
+        </form>
+</div>
 {% endblock %} %}

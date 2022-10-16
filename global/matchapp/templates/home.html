@@ -1,17 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-
-<br>
-
-<section>
-    <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit commodi vero dolorem, molestias odio qui et
-            consectetur fugit aut explicabo minus, aliquam amet
-            architecto odit veritatis doloremque facilis, alias fuga.
-        </p>
-        <button onclick="alerta()">Teste de JavaScript</button>
+<div class="container">
+    <div class="screenHome">
+        <form class="form">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Esse illo iste hic inventore eligendi, perferendis suscipit 
+                sapiente ratione aut adipisci quam accusamus quas pariatur 
+                eveniet mollitia? Iusto sapiente accusamus fugiat!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Molestiae, consequatur maiores quas repellat architecto vero, 
+                unde doloremque voluptatum aliquam assumenda sit vitae voluptate. 
+                Voluptates dolorem voluptatem quisquam aliquam, distinctio deserunt!
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatem. 
+                Aperiam, fugit commodi incidunt perferendis saepe tempora omnis minima, 
+                repellendus sint, laboriosam esse eum! Corporis recusandae consectetur 
+                perferendis dolor ullam?
+            </p>
+            <a href="{% url 'perfil_add' %}"> Criar perfil</a>
+        </form>
     </div>
-</section>
-
+</div>
 {% endblock %}
