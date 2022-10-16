@@ -42,6 +42,8 @@ def perfil_add(request):
         return render (request, 'perfil_add.html')
     else:
         nome = request.POST.get('nome')
+        email = request.POST.get('email')
+        senha = request.POST.get('senha')
         cpf = request.POST.get('cpf')
         game1 = request.POST.get('game1')
         pontuacao1 = request.POST.get('pontuacao1')
@@ -54,7 +56,7 @@ def perfil_add(request):
         endereco = request.POST.get('endereco')
         zone = request.POST.get('zone')
 
-        if cpf=='' or nome=='' or game1=='' or pontuacao1=='' or dat_nasc=='' or nickname=='' or zone=='':
+        if cpf=='' or nome=='' or game1=='' or pontuacao1=='' or dat_nasc=='' or nickname=='' or zone=='' or email=='' or senha=='':
             messages.info(request, 'Campos obrigatórios não foram preenchidos!')
             return redirect('perfil_add')
         if pontuacao2=='':
@@ -67,6 +69,14 @@ def perfil_add(request):
         messages.info(request, 'Esse CPF já está cadastrado no GamesMatch!')
         return redirect('perfil_add')
     else:
+        user = User.objects.create_user(
+            first_name = nome,
+            email = email,
+            username = nickname,
+            password = senha
+        )
+        user.save()
+
         perfil = Perfil(
             nome = nome,
             cpf = cpf,

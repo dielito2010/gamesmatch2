@@ -6,7 +6,7 @@
         <!-- formulário de login -->
         <form class="form" action="{% url 'perfil_add' %}" method="POST">
             {% csrf_token %}
-            <h3 class="title">Cadastre-se no GamesMatch</h3>
+            <h1 class="title">Cadastre-se no GamesMatch</h1>
             {% if messages %}
             {% for m in messages %}
             <div style="background-color: red; font-size: 20px; color: white; text-align: center;">
