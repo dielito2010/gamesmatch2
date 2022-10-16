@@ -47,9 +47,10 @@ a:hover{
 .bntPrincipais{text-align:right;}
 
 .navbar{
-  background-color: rgba(135, 255, 135, 0.363);
+  /*background-color: rgba(135, 255, 135, 0.363);*/
+  background: linear-gradient( rgba(2, 252, 23, 0.774), rgba(0, 0, 139, 0.733));
   box-shadow: 10px 10px 10px black;
-  border-radius: 6px;
+  border-radius: 30px;
 }
 
 .headCadPerfil {
@@ -93,7 +94,7 @@ a:hover{
 	border-radius: 15px;
 	position: absolute;
 	left: 50%;
-	top: 55%;
+	top: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
 	padding-top: 50px;
@@ -126,7 +127,7 @@ a:hover{
 	text-transform: uppercase;
 	font-weight: 700;
 	color: white;
-	background: linear-gradient(to right, rgb(255, 68, 0), orange);
+	background: linear-gradient(to right, rgb(255, 68, 0), rgb(195, 0, 255));
 	cursor: pointer;
 }
 
