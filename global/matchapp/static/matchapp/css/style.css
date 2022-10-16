@@ -34,13 +34,22 @@ footer {
   line-height: 100%;
 }
 /*tirando sublinhado de todos os links*/
-a {text-decoration: none;}
+a{
+	text-decoration: none;
+	color: lightgray;
+	font-size: 18px;
+}
+
+a:hover{
+	color: white;
+}
 
 .bntPrincipais{text-align:right;}
 
 .navbar{
   background-color: rgba(135, 255, 135, 0.363);
   box-shadow: 10px 10px 10px black;
+  border-radius: 6px;
 }
 
 .headCadPerfil {
@@ -73,7 +82,63 @@ a {text-decoration: none;}
 
 /*-------------implementa aqui nesse espaço o estilo da tela login e login_add-------------*/
 
+.container{
+	width: 100%;
+	height: 100%;
+}
 
+.screen{
+	width: 300px;
+	background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));
+	border-radius: 15px;
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding-top: 50px;
+	color: #fff;
+	align-items: center;
+	line-height: 50px;
+  box-shadow: 10px 10px 10px black;
+}
+
+.form{
+	display: flex;
+	flex-direction: column;
+}
+
+.inputs{
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px;
+	border: none;
+	margin-bottom: 10px;
+	border-radius: 50px;
+}
+
+.btn{
+	padding: 10px;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 50px;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: white;
+	background: linear-gradient(to right, rgb(255, 68, 0), orange);
+	cursor: pointer;
+}
+
+.description{
+	color: lightgray;
+	font-size: 15px;
+	margin-top: 50px;
+}
+
+.description a{
+	font-weight: 700;
+}
 
 
 /*-------------------------------------------------------------------------------------------*/

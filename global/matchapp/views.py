@@ -52,7 +52,15 @@ def perfil_add(request):
         cep = request.POST.get('cep')
         endereco = request.POST.get('endereco')
         zone = request.POST.get('zone')
-    
+
+        if cpf=='' or nome=='' or game1=='' or pontuacao1=='' or dat_nasc=='' or nickname=='' or zone=='':
+            messages.info(request, 'Campos obrigatórios não foram preenchidos!')
+            return redirect('perfil_add')
+        if pontuacao2=='':
+            pontuacao2=0
+        if cep=='':
+            cep=0
+            
     perfil = Perfil.objects.filter(cpf=cpf).first()
     if perfil:
         messages.info(request, 'Esse CPF já está cadastrado no GamesMatch!')

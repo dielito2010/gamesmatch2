@@ -21,7 +21,7 @@
         {% if messages %}
         {% for m in messages %}
         <div style="background-color: red; font-size: 20px;
-        color: white; text-align: center; border-radius: 10px;">
+        color: white; text-align: center; border-radius: 20px;">
             <br>
             {{ m }}
             <br>
@@ -33,24 +33,24 @@
             <form action="{% url 'perfil_add' %}" method="POST">
                 {% csrf_token %}
                 <div>
-                    <p>NOME: <input type="text" name="nome" placeholder="Seu nome completo"></p>
-                    <p>CPF: <input type="number" name="cpf" placeholder="Somente números" maxlength="11"></p>
-                    <p>GAME1: <input type="text" name="game1"></p>
-                    <p>PONTUAÇÃO1: <input type="number" name="pontuacao1"></p>
-                    <p>GAME2: <input type="text" name="game2"></p>
-                    <p>PONTUAÇÃO2: <input type="number" name="pontuacao2"></p>
-                    <p>DATA DE NASCIMENTO: <input type="date" name="dat_nasc"></p>
-                    <p>NICKNAME: <input type="text" name="nickname" placeholder="Apelido na net"></p>
+                    <p>NOME* <input type="text" name="nome" placeholder="Seu nome completo"></p>
+                    <p>CPF* <input type="text" name="cpf" placeholder="Somente números" maxlength="11" minlength="11"></p>
+                    <p>GAME1* <input type="text" name="game1" placeholder="Seu game favorito"></p>
+                    <p>PONTUAÇÃO1* <input type="number" name="pontuacao1" placeholder="Seus pontos no game favorito"></p>
+                    <p>GAME2: <input type="text" name="game2" placeholder="Tem outro favorito? Digite aqui!"></p>
+                    <p>PONTUAÇÃO2: <input type="number" name="pontuacao2" placeholder="Seus pontos, não pode ser fake einh ;-)"></p>
+                    <p>DATA DE NASCIMENTO* <input type="date" name="dat_nasc"></p>
+                    <p>NICKNAME* <input type="text" name="nickname" placeholder="Apelido na net"></p>
                     <p>FOTO: <input type="button" name="image" value="Imagem para perfil"></p>
-                    <p>CEP: <input type="number" name="cep" placeholder="Somente números" maxlength="8"></p>
-                    <p>ENDEREÇO: <input type="text" name="endereco"></p>
-                    <p>ZONE: <input type="text" name="zone" placeholder="Zonas da sua cidade"></p>
+                    <p>CEP: <input type="text" name="cep" placeholder="Somente números" maxlength="8" minlength="8"></p>
+                    <p>ENDEREÇO: <input type="text" name="endereco" placeholder="Endereço completo com número, bairo, cidade e estado"></p>
+                    <p>ZONE* <input type="text" name="zone" placeholder="Zonas da sua cidade"></p>
                 </div>
                 <hr>
+                <p>* Obrigatórios</p>
                 <center>
                     <button class="bnt-submit" type="submit" onclick="savePerfil()">Salvar</button>
                     <a href="{% url 'home' %}" <button class="bnt-cancel">Cancelar</a>
-                </center>
             </form>
         </div>
     </section>
