@@ -5,6 +5,7 @@ from django.shortcuts import redirect, render
 #from django.contrib.auth.decorators import login_required
 from matchapp.models import Perfil
 #from matchapp.forms import PerfilForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 

@@ -6,11 +6,13 @@
         <!-- formulário de login -->
         <form class="form">
             <h3 class="title">Faça login para continuar</h3>
-            <input type="email" placeholder="Usuário" class="inputs" />
+            <input type="email" placeholder="Nickname" class="inputs" />
             <input type="password" placeholder="Senha" class="inputs" />
             <button class="btn">Entrar</button>
             <a href="#">Esqueceu sua senha?</a>
-            <p class="description">Não tem uma conta? Clique em  <a href="{% url 'home' %}">CRIAR</a></p>
+            <div style="background-color: rgba(0, 0, 0, 0.192)">
+                <p class="description">Não tem uma conta? Clique em  <a href="{% url 'home' %}">CRIAR</a></p>
+            </div>
         </form>
     </div>
 </div>
