@@ -86,6 +86,7 @@ a:hover{
 .container{
 	width: 100%;
 	height: 100%;
+  align-items: center;
 }
 
 .screen{
@@ -104,8 +105,22 @@ a:hover{
   box-shadow: 10px 10px 10px black;
 }
 
+.screenCadPerfil{
+	width: 30%;
+	background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));
+	border-radius: 15px;
+	text-align: center;
+	color: #fff;
+	align-items: center;
+  box-shadow: 10px 10px 10px black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  left: 35%;
+}
+
 .form{
-	display: flex;
+	display: contents;
 	flex-direction: column;
 }
 
@@ -134,7 +149,7 @@ a:hover{
 .description{
 	color: lightgray;
 	font-size: 15px;
-	margin-top: 50px;
+	margin-top: 0px;
 }
 
 .description a{
