@@ -1,46 +1,50 @@
-#from multiprocessing import context
-#from pyexpat.errors import messages
 from django.contrib import messages
 from django.shortcuts import redirect, render
-#from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required
 from matchapp.models import Perfil
-#from matchapp.forms import PerfilForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
+from django.contrib.auth import logout as logout_django
+#from matchapp.forms import PerfilForm
 
 # Create your views here.
 
 def home(request):
     return render(request, 'home.html')
+#######################################################################################
 
 def login(request):
     if request.method == "GET":
         return render(request, 'login.html')
     else:
-        username = request.POST.get('usuario')
+        usuario = request.POST.get('usuario')
         senha = request.POST.get('senha')
 
-        user = authenticate(username=username, password=senha)
+        user = authenticate(username=usuario, password=senha)
         if user:
             login_django(request, user)
             return render(request, 'home.html')
         else:
             messages.info(request, 'Usuário ou senha inválidos!')
             return redirect('login')
+#######################################################################################
 
+@login_required
+def logout(request):
+    logout_django(request)
+    return render(request, 'home.html')
+#######################################################################################
 
-def cadastro(request):
-    return render(request, 'login_add.html')
-
+@login_required(login_url='/login')
 def perfil(request):
     perfil = Perfil.objects.all()
     context = {
         'perfis' : perfil
     }
     return render(request, 'perfil.html', context)
+#######################################################################################
 
-#@login_required
 def perfil_add(request):
     if request.method == "GET":
         return render (request, 'perfil_add.html')

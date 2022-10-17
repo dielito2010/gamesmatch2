@@ -19,11 +19,12 @@
                         <img src="{% static 'matchapp/css/img/logo2.png' %}" alt="logo" align="left">
                     </td>
                     <td class="bntPrincipais" width="50%">
-                        {% if user.is_aitenticated %}
-                        Olá, {{user.get_username}}
-                        <a href="{% url 'logout' %}">Sair</a>
+                        {% if user.is_authenticated %}
+                            Bem vindo(a), {{user.get_username}}
+                            <a class="btn" href="{% url 'logout' %}" onclick="return confirme('Realmente deseja sair?')">Sair</a>
                         {% else %}
-                            <a href="{% url 'login' %}">Login  |</a>
+                            <a href="{% url 'login' %}">Login</a>
+                            &nbsp;	&nbsp;|	&nbsp;	&nbsp;
                             <a href="{% url 'perfil_add' %}">Cadastro</a>
                         {% endif %}
                     </td>
