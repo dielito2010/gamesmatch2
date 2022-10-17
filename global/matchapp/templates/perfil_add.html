@@ -28,12 +28,12 @@
             <input name="cep" type="text" placeholder="CEP, somente números" maxlength="8" minlength="8" class="inputs" pattern="\d{8}" title="Somente numeros do seu CEP, são 8 ao total!"/>
             <input name="endereco" type="text" placeholder="Seu endereço completo" class="inputs" />
             <select name="zone" type="text" class="inputs">
-                    <option value="Zona-Leste">Em qual zona da cidade você mora?</option>
+                    <option selected value="">*Em qual zona da cidade você mora?</option>
                     <option value="Zona-Leste">Zona-Leste</option>
                     <option value="Zona-Oeste">Zona-Oeste</option>
                     <option value="Zona-Sul">Zona-Sul</option>
                     <option value="Zona-Norte">Zona-Norte</option>
-                    <option value="Zona-Centro-Oeste">Zona-Centro-Oeste</option>
+                    <option value="Zona-Centro-Sul">Zona-Centro-Oeste</option>
             </select>
             <input name="image" type="button" value="Enviar uma imagem" class="inputs" />
             <button class="btn" type="submit" onclick="savePerfil()">criar</button>
