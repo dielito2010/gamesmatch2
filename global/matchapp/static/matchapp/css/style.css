@@ -39,7 +39,7 @@ p {
 }
 
 .screen{
-	width: 400px;
+	width: 300px;
 	background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));
 	border-radius: 15px;
 	position: absolute;
