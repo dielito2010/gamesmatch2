@@ -1,50 +1,43 @@
 {% extends 'base.html' %}
 {% block content %}
-    <section>
-        <div class="headPerfil">
+<div class="container">
+    <!-- tela de login -->
+    <div class="screenPerfil">
+        <div>
             <h1>Perfis cadastrados:</h1>
         </div>
-        <div class="viewPerfil">
-            <table class="tbPerfil">
+        <div>
+            <table>
                 <thead>
                     <tr>
-                        <th> NOME </th>
-                        <th> CPF </th>
+                        <th> NICKNAME </th>
                         <th> GAME1 </th>
                         <th> PONTUACAO1 </th>
                         <th> GAME2 </th>
                         <th> PONTUACAO2 </th>
-                        <th> DAT_NASC </th>
-                        <th> NICKNAME </th>
-                        <th> IMAGE </th>
-                        <th> CEP </th>
-                        <th> ENDERECO </th>
                         <th> ZONE </th>
+                        <th> NOME </th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for perfil in perfis %}
                     <tr>
-                        <td>{{ perfil.nome }}</td>
-                        <td>{{ perfil.cpf }}</td>
+                        <td>{{ perfil.nickname }}</td>
                         <td>{{ perfil.game1 }}</td>
                         <td>{{ perfil.pontuacao1 }}</td>
                         <td>{{ perfil.game2 }}</td>
                         <td>{{ perfil.pontuacao2 }}</td>
-                        <td>{{ perfil.dat_nasc }}</td>
-                        <td>{{ perfil.nickname }}</td>
-                        <td>{{ perfil.image }}</td>
-                        <td>{{ perfil.cep }}</td>
-                        <td>{{ perfil.endereco }}</td>
                         <td>{{ perfil.zone }}</td>
+                        <td>{{ perfil.nome }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
         <br>
-        <center>
+        <div>
             <a href="{% url 'home' %}">Página inicial</a>
-        </center>
-    </section>
+        </div> 
+    </div>
+</div>
 {% endblock  %}
