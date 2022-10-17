@@ -5,11 +5,21 @@
     <div class="screen">
         <!-- formulário de login -->
         <form class="form">
+            {% csrf_token %}
+            <h1 class="title">Cadastre-se no GamesMatch</h1>
+            {% if messages %}
+            {% for m in messages %}
+            <div style="background-color: red; font-size: 20px; color: white; text-align: center;">
+                {{ m }}
+            </div>
+            <br>
+            {% endfor %}
+            {% endif %}
             <h3 class="title">Faça login para continuar</h3>
-            <input type="text" placeholder="Nickname" class="inputs" />
-            <input type="password" placeholder="Senha" class="inputs" />
-            <button class="btn">Entrar</button>
-            <a href="#">Esqueceu sua senha?</a>
+            <input name="usuario" type="text" placeholder="Nickname" class="inputs" />
+            <input name="senha" type="password" placeholder="Senha" class="inputs" />
+            <button type="submit" class="btn">Entrar</button>
+            <a href="mailto:ad miel@bol.com.br">Esqueceu sua senha?</a>
             <div style="background-color: rgba(0, 0, 0, 0.192)">
                 <p class="description">Não tem uma conta? Clique em  <a href="{% url 'home' %}">CRIAR</a></p>
             </div>
