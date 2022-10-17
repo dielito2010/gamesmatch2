@@ -6,6 +6,8 @@ from django.shortcuts import redirect, render
 from matchapp.models import Perfil
 #from matchapp.forms import PerfilForm
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as login_django
 
 # Create your views here.
 
@@ -13,7 +15,20 @@ def home(request):
     return render(request, 'home.html')
 
 def login(request):
-    return render(request, 'login.html')
+    if request.method == "GET":
+        return render(request, 'login.html')
+    else:
+        username = request.POST.get('usuario')
+        senha = request.POST.get('senha')
+
+        user = authenticate(username=username, password=senha)
+        if user:
+            login_django(request, user)
+            return render(request, 'home.html')
+        else:
+            messages.info(request, 'Usuário ou senha inválidos!')
+            return redirect('login')
+
 
 def cadastro(request):
     return render(request, 'login_add.html')
@@ -25,18 +40,7 @@ def perfil(request):
     }
     return render(request, 'perfil.html', context)
 
-def perfil_add(request):
-    return render(request, 'perfil_add.html')
-
 #@login_required
-#def perfil_add(request):
-#    form = PerfilForm()
-#    if (request.method == 'POST'):
-#
-#        form = PerfilForm(request.POST)
-#
-#        if(form.is_valid()):
-
 def perfil_add(request):
     if request.method == "GET":
         return render (request, 'perfil_add.html')
