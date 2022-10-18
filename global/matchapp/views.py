@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, resolve_url
 from django.contrib.auth.decorators import login_required
 from matchapp.models import Perfil
 from django.contrib.auth.models import User
@@ -48,6 +48,10 @@ def perfil(request):
 
 def perfil_add(request):
     if request.method == "GET":
+        #usuario = request
+        #user = authenticate(username=usuario)
+        #if this.is_authenticated:
+        #   messages.info(request, 'Precisa fazer logout/sair para criar outro perfil')
         return render (request, 'perfil_add.html')
     else:
         nome = request.POST.get('nome')
@@ -64,7 +68,6 @@ def perfil_add(request):
         cep = request.POST.get('cep')
         endereco = request.POST.get('endereco')
         zone = request.POST.get('zone')
-
         if cpf=='' or nome=='' or game1=='' or pontuacao1=='' or dat_nasc=='' or nickname=='' or zone=='' or email=='' or senha=='':
             messages.info(request, 'Campos obrigatórios não foram preenchidos!')
             return redirect('perfil_add')
@@ -72,7 +75,6 @@ def perfil_add(request):
             pontuacao2=0
         if cep=='':
             cep=0
-            
     perfil = Perfil.objects.filter(cpf=cpf).first()
     if perfil:
         messages.info(request, 'Esse CPF já está cadastrado no GamesMatch!')
@@ -85,7 +87,6 @@ def perfil_add(request):
             password = senha
         )
         user.save()
-
         perfil = Perfil(
             nome = nome,
             cpf = cpf,
