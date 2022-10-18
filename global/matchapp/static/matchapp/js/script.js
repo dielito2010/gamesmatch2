@@ -4,3 +4,6 @@ function savePerfil() {
 function login() {
     alert('Se os dados estiverem OK, você visualizará seu nickname no canto superior direito, caso os dados estejam incoerentes, verifique a mensagem abaixo!')
 }
+function sair() {
+    confirm('Deseja realmente sair?')
+}

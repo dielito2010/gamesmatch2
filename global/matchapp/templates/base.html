@@ -21,7 +21,8 @@
                     <td class="bntPrincipais" width="50%">
                         {% if user.is_authenticated %}
                             Bem vindo(a), {{user.get_username}}
-                            <a class="btn" href="{% url 'logout' %}" onclick="return confirme('Realmente deseja sair?')">Sair</a>
+                            <a class="btn" href="{% url 'logout' %}" action="{% url 'logout' %}" 
+                            onclick="return confirm('CANCELAR para voltar ao GamesMatch ;-) ou  OK  para sair :-(')">Sair</a>
                         {% else %}
                             <a href="{% url 'login' %}">Login</a>
                             &nbsp;	&nbsp;|	&nbsp;	&nbsp;
