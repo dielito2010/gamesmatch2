@@ -62,6 +62,20 @@ p {
 	box-shadow: 10px 10px 10px black;
 }
 
+.redesImg {
+	background-color: rgba(0, 0, 0, 0.192);
+	align-items: center;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	column-gap: 12px;
+}
+
+.redesImg img {
+	width: 40px;
+	border-radius: 100%;
+}
+
 .screenCadPerfil{
 	width: 500px;
 	background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));

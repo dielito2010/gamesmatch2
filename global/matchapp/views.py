@@ -24,10 +24,11 @@ def login(request):
         user = authenticate(username=usuario, password=senha)
         if user:
             login_django(request, user)
-            return redirect('perfil')
+            return redirect('home')
         else:
             messages.info(request, 'Usuário ou senha inválidos!')
-            return redirect('login')
+            #return redirect('login')
+            return render(request, 'login.html')
 #######################################################################################
 
 @login_required
