@@ -2,27 +2,28 @@
 {% block content %}
 <div class="container">
     <div class="screenHome">
-        <form class="form">
-            <p>
-                (L)orem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Esse illo iste hic inventore eligendi, perferendis suscipit 
-                sapiente ratione aut adipisci quam accusamus quas pariatur 
-                eveniet mollitia? Iusto sapiente accusamus fugiat!
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Molestiae, consequatur maiores quas repellat architecto vero, 
-                unde doloremque voluptatum aliquam assumenda sit vitae voluptate. 
-                Voluptates dolorem voluptatem quisquam aliquam, distinctio deserunt!
-            </p>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, voluptatem. 
-                Aperiam, fugit commodi incidunt perferendis saepe tempora omnis minima, 
-                repellendus sint, laboriosam esse eum! Corporis recusandae consectetur 
-                perferendis dolor ullam?
-            </p>
-            <a href="{% url 'perfil_add' %}"> Criar perfil</a>
-        </form>
+        <select name="tipoMatch" id="match" class="inputs">
+            <option value="1">Match: GAME x ZONE</option>
+            <option value="2">Match: GAMER x ZONE</option>
+            <option value="3">Match: GAMER x GAMER</option>
+        </select>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for perfil in perfis %}
+                <tr>
+                    <td>{{ perfil.game1 }}</td>
+                    <td>{{ perfil.zone }}</td>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'perfil_add' %}"> Crie seu perfil aqui &#128521;</a>
     </div>
 </div>
 {% endblock %}
