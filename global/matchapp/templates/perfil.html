@@ -10,24 +10,26 @@
                 <thead>
                     <tr>
                         <th> NICKNAME </th>
-                        <th> GAME1 </th>
-                        <th> PONTUACAO1 </th>
-                        <th> GAME2 </th>
-                        <th> PONTUACAO2 </th>
-                        <th> ZONE </th>
                         <th> NOME </th>
+                        <th> CPF </th>
+                        <th> </th>
+                        <th> </th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for perfil in perfis %}
                     <tr>
                         <td>{{ perfil.nickname }}</td>
-                        <td>{{ perfil.game1 }}</td>
-                        <td>{{ perfil.pontuacao1 }}</td>
-                        <td>{{ perfil.game2 }}</td>
-                        <td>{{ perfil.pontuacao2 }}</td>
-                        <td>{{ perfil.zone }}</td>
                         <td>{{ perfil.nome }}</td>
+                        <td>{{ perfil.cpf }}</td>
+                        <td>
+                            <button style="background-color: greenyellow;" name="editar"
+                            onclick="location.href='{% url 'perfil_edit' %}'" >Editar</button>
+                        </td>
+                        <td>
+                            <button style="background-color: red;" name="editar"
+                            onclick="location.href='{% url 'perfil_del' %}'" >Excluir</button>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

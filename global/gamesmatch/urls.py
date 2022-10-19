@@ -24,4 +24,6 @@ urlpatterns = [
     path('logout', views.logout, name='logout'),
     path('perfil', views.perfil, name='perfil'),
     path('perfil/add', views.perfil_add, name='perfil_add'),
+    path('perfil/edit', views.perfil_edit, name='perfil_edit'),
+    path('perfil/del', views.perfil_del, name='perfil_del'),
 ]

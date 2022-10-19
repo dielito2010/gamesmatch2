@@ -44,11 +44,22 @@ def logout(request):
 
 @login_required(login_url='/login')
 def perfil(request):
-    perfil = Perfil.objects.all()
+    perfil = Perfil.objects.all()[0:12]
     context = {
         'perfis' : perfil
     }
     return render(request, 'perfil.html', context)
+#######################################################################################
+
+@login_required(login_url='/login')
+def perfil_edit(request):
+    return render(request, 'home.html')
+#######################################################################################
+
+@login_required(login_url='/login')
+def perfil_del(request):
+    return render(request, 'home.html')
+
 #######################################################################################
 
 def perfil_add(request):

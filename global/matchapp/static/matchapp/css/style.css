@@ -43,7 +43,6 @@ p {
 .container{
 	width: 100%;
 	height: 100%;
-	align-items: center;
 }
 
 .screen{
@@ -91,13 +90,13 @@ p {
 }
 
 .screenHome {
-	width: auto;
-	/*background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));
+	width: 300px;
+	background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));
 	border-radius: 15px;
 	text-align: center;
 	color: #fff;
 	align-items: center;
-  	box-shadow: 10px 10px 10px black;*/
+  	box-shadow: 10px 10px 10px black;
 }
 
 .screenPerfil {
