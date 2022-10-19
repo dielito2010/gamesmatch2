@@ -1,23 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <div class="container">
     <div class="screenHome">
-        <select name="tipoMatch" id="match" class="inputs">
+        <!--select name="tipoMatch" id="match" class="inputs">
             <option value="1">Match: GAME x ZONE</option>
             <option value="2">Match: GAMER x ZONE</option>
             <option value="3">Match: GAMER x GAMER</option>
         </select>
-        <br>
+        <br-->
+        <h1>Top 5 matchs recentes:</h1>
         <table>
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
+                    <th>NickName</th>
+                    <th>Game</th>
+                    <th>Zona</th>
                 </tr>
             </thead>
             <tbody>
-                {% for perfil in perfis %}
+                {% for perfil in tabela %}
                 <tr>
+                    <td>{{ perfil.nickname }}</td>
                     <td>{{ perfil.game1 }}</td>
                     <td>{{ perfil.zone }}</td>
                 {% endfor %}

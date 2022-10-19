@@ -11,7 +11,12 @@ from django.contrib.auth import logout as logout_django
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    #tipoMatch = request.POST.get('tipoMatch')
+    perfil = Perfil.objects.order_by('game1')[0:5]
+    context = {
+        'tabela' : perfil
+    }    
+    return render(request, 'home.html', context)
 #######################################################################################
 
 def login(request):
