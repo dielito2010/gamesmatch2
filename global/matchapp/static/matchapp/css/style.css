@@ -61,6 +61,17 @@ p {
 	box-shadow: 10px 10px 10px black;
 }
 
+.games {
+	align-items: center;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	column-gap: 12px;
+}
+.games img {
+	width: 150px;
+}
+
 .redesImg {
 	background-color: rgba(0, 0, 0, 0.192);
 	align-items: center;
@@ -90,13 +101,19 @@ p {
 }
 
 .screenHome {
-	width: 300px;
+	width: max-content;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	background: linear-gradient( rgba(0, 0, 139, 0.733), rgba(2, 252, 23, 0.774));
 	border-radius: 15px;
-	text-align: center;
-	color: #fff;
-	align-items: center;
+	color: white;
   	box-shadow: 10px 10px 10px black;
+	line-height: 10px;
 }
 
 .screenPerfil {
