@@ -1,20 +1,108 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 <div class="container">
     <div class="screenHome">
-        <!--select name="tipoMatch" id="match" class="inputs">
-            <option value="1">Match: GAME x ZONE</option>
-            <option value="2">Match: GAMER x ZONE</option>
-            <option value="3">Match: GAMER x GAMER</option>
-        </select>
-        <br-->
-        <h1>Top 5 matchs recentes:</h1>
+        <h2>Top 5 matchs recentes, venha fazer parte da rede dos Gamers:</h2>
         <table>
             <thead>
                 <tr>
-                    <th>NickName</th>
-                    <th>Game</th>
-                    <th>Zona</th>
+                    <th>-------------NICKNAME deu</th>
+                    <th>match e NICKNAME aceitou,</th>
+                    <th>eles jogam o GAME e agora</th>
+                    <th>são amigos na ZONA-------------</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>------------</td>
+                    <th>------------</th>
+                    <th>------------</th>
+                    <th>------------</th>
+                </tr>
+                <tr>
+                    <td>morgoft</td>
+                    <th>kenji565</th>
+                    <th>GTA</th>
+                    <th>Zona-Norte</th>
+                </tr>
+                <tr>
+                    <td>------------</td>
+                    <th>------------</th>
+                    <th>------------</th>
+                    <th>------------</th>
+                </tr>
+                <tr>
+                    <td>Hannibal</td>
+                    <th>Armstrong</th>
+                    <th>dota</th>
+                    <th>Zona-Norte</th>
+                </tr>
+                <tr>
+                    <td>------------</td>
+                    <th>------------</th>
+                    <th>------------</th>
+                    <th>------------</th>
+                </tr>
+                <tr>
+                    <td>jacare tanga</td>
+                    <th>ceberos007</th>
+                    <th>lol</th>
+                    <th>Zona-Leste</th>
+                </tr>
+                <tr>
+                    <td>------------</td>
+                    <th>------------</th>
+                    <th>------------</th>
+                    <th>------------</th>
+                </tr>
+                <tr>
+                    <td>totoro</td>
+                    <th>Pau Gasol</th>
+                    <th>doom</th>
+                    <th>Zona-Sul</th>
+                </tr>
+                <tr>
+                    <td>------------</td>
+                    <th>------------</th>
+                    <th>------------</th>
+                    <th>------------</th>
+                </tr>
+                <tr>
+                    <td>jhenry</td>
+                    <th>auxiliadora</th>
+                    <th>game1</th>
+                    <th>Zona-Oeste</th>
+                </tr>
+                <tr>
+                    <td>------------</td>
+                    <th>------------</th>
+                    <th>------------</th>
+                    <th>------------</th>
+            </tbody>
+        </table>
+        <h2>Top 5 Games preferidos da galera:</h2>
+        <div class="games">
+            <img src="{% static 'matchapp/css/img/mir4.png' %}">
+            <img src="{% static 'matchapp/css/img/dota.png' %}">
+            <img src="{% static 'matchapp/css/img/gta.png' %}">
+            <img src="{% static 'matchapp/css/img/bleache.png' %}">
+            <img src="{% static 'matchapp/css/img/doom.png' %}">
+        </div>
+        <div style="background-color: rgba(0, 0, 0, 0.322); height: 50px">
+            <p style="color: red;">Veja abaixo nossos cadatsros mais recentes, quem sabe vc se indentifica com algum game ou zona.</p>
+            <p style="color: red;">Quer amigos com os mesmos gostos para formar uma equipe? Se conhecerem? vem pro GamesMatch!</p>
+        </div>
+        <table>
+            <tbody>
+            <thead>
+                <tr>
+                    <th>---Nickname---</th>
+                    <th>---Game Professional</th>
+                    <th>---Score Professional</th>
+                    <th>---Game Amateur</th>
+                    <th>---Score Amateur</th>
+                    <th>-----Zone-----</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,11 +110,16 @@
                 <tr>
                     <td>{{ perfil.nickname }}</td>
                     <td>{{ perfil.game1 }}</td>
+                    <td>{{ perfil.pontuacao1 }}</td>
+                    <td>{{ perfil.game2 }}</td>
+                    <td>{{ perfil.pontuacao2 }}</td>
                     <td>{{ perfil.zone }}</td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
-        <a href="{% url 'perfil_add' %}"> Crie seu perfil aqui &#128521;</a>
+        <br>
+        <a href="{% url 'perfil_add' %}">Curtiu o GamesMatch? encontre gamers com as mesmas preferências que vc, clique aqui e crie seu perfil &#128521;</a>
     </div>
 </div>
 {% endblock %}

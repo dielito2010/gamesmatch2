@@ -12,30 +12,11 @@ from django.contrib.auth import logout as logout_django
 
 def home(request):
     #tipoMatch = request.POST.get('tipoMatch')
-    perfil = Perfil.objects.order_by('game1')[0:1]
+    perfil = Perfil.objects.order_by('nome')[0:50]
     context = {
         'tabela' : perfil
     }    
     return render(request, 'home.html', context)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #######################################################################################
 
@@ -59,7 +40,7 @@ def login(request):
 @login_required
 def logout(request):
     logout_django(request)
-    return render(request, 'home.html')
+    return render(request, 'login.html')
 #######################################################################################
 
 @login_required(login_url='/login')
