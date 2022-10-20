@@ -50,6 +50,10 @@ def perfil(request):
         'perfis' : perfil
     }
     return render(request, 'perfil.html', context)
+
+
+
+    
 #######################################################################################
 
 @login_required(login_url='/login')
