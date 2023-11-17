@@ -1,6 +1,6 @@
 services:
   - type: web
     name: gamesmatch
-    runtime: python3
+    runtime: python
     buildCommand: "pip install --upgrade pip wheel setuptools && pip install -r requirements.txt"
-    startCommand: "cd global && python manage.py runserver"
+    startCommand: "cd global && python3 manage.py runserver"
