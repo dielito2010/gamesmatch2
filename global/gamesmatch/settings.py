@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost",
     "https://*.gitpod.io",
+    "https://gamesmatch.onrender.com",
 ]
 
 # Application definition
